@@ -25,37 +25,89 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse " id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="#">INICIO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="#">NOSOTROS</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">CONTACTO</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
+            PRODUCTO
           </a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+            <li><a class="dropdown-item" href="#">ADIDAS</a></li>
+            <li><a class="dropdown-item" href="#">NEW BALANCE</a></li>
+            <li><a class="dropdown-item" href="#">NIKE</a></li>
+            <li><a class="dropdown-item" href="#">PUMAS</a></li>
           </ul>
         </li>
-        <li class="nav-item">
-          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-        </li>
+
       </ul>
       <form class="d-flex" role="search">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
-        <button class="btn btn-outline-success" type="submit">Search</button>
+        <input class="form-control m-2" type="search" placeholder="Buscar producto..." aria-label="Search"/>
+        <button class="btn btn-outline-success m-2" type="submit">BUSCAR</button>
+        <button class="btn btn-outline-primar m-2 fs-5" data-bs-toggle="modal" data-bs-target="#authModal"><i class="bi bi-person"></i></button>
+        <button class="btn btn-outline-secondar m-2 fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"><i class="bi bi-cart4"></i></button>  
       </form>
     </div>
   </div>
 </nav>
-        
+ 
+
+    <!-- Modal de Inicio de Sesión -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      
+      <!-- Encabezado -->
+      <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="authModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+
+      <!-- Cuerpo del modal -->
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="email" placeholder="ejemplo@gmail.com" required>
+          </div>
+
+          <div class="mb-3">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="password" placeholder="••••••••" required>
+          </div>
+
+          <div class="d-flex justify-content-between align-items-center">
+            <div>
+              <input type="checkbox" id="remember">
+              <label for="remember">Recordarme</label>
+            </div>
+            <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
+          </div>
+
+          <div class="mt-4">
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          </div>
+        </form>
+      </div>
+
+      <!-- Pie del modal -->
+      <div class="modal-footer">
+        <p class="text-center w-100 mb-0">¿No tenés cuenta? 
+          <a href="#" class="text-primary text-decoration-none">Registrate</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
     </main>
 
 </body>
