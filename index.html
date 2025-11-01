@@ -9,6 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="./css/hero.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <meta name="description" content="En GLAM encontraras la mejor ropa deportiva: remeras, shorts, camperas, calzado. Moda, confort y rendimiento en un solo lugar">
     <meta name="keywords" content="Zapatillas, Busos, Camisetas, Short, Camperas, Moda, Confort, Elegancia">
@@ -16,8 +17,11 @@
 </head>
 
 <body>
+    <section>
+        <img src="./assets/img/hero_02.png" class="img-fluid w-100" alt="4_marcas">
+    </section>
 
-    <header>
+    <header class="navegador sticky-top">
         <nav class="navbar navbar-expand-lg bg-body-tertiary shadow">
   <div class="container">
     <a class="navbar-brand" href="index.html"><img src="./assets/img/Logo-Glam-Sin-Fondo.png" style="width: 150px; height: 80px;" alt="Logo_GLAM"></a>
@@ -43,7 +47,7 @@
             <li><a class="dropdown-item" href="#">ADIDAS</a></li>
             <li><a class="dropdown-item" href="#">NEW BALANCE</a></li>
             <li><a class="dropdown-item" href="#">NIKE</a></li>
-            <li><a class="dropdown-item" href="#">PUMAS</a></li>
+            <li><a class="dropdown-item" href="#">PUMA</a></li>
           </ul>
         </li>
 
@@ -60,44 +64,68 @@
         </nav>
     </header>
 
-    <!-- HERO -->
-<section class="hero d-flex align-items-center">
-  <div class="container">
-    <div class="row align-items-center">
-      <!-- Texto -->
-      <div class="col-12 col-lg-12 text-center text-light">
-        <h1 class="display-5 fw-bold mb-3">• GLAM •</h1>
-        <h2 class="display-5 fw-bold mb-3">Deportes que te mueven</h2>
-        <p class="lead mb-5">
-          Zapatillas, indumentaria y accesorios de alto rendimiento. Envíos a todo el país.
-        </p>
+    <section>
+        <img src="./assets/img/hero_01.png" class="img-fluid" alt="">
+    </section>
 
-        <div class="d-flex justify-content-around">
-          <a href="#productos" class="btn btn-outline-light btn-lg d-flex align-items-center px-3">
-            <i class=""></i>👟Ver productos
-          </a>
-          <a href="#ofertas" class="btn btn-outline-light btn-lg d-flex align-items-center px-3">
-            <i class=""></i>⚡Ofertas de hoy
-          </a>
+    <!-- HERO -->
+    <section class="hero d-flex align-items-center justify-content-center text-center text-light">
+  <div class="container position-relative">
+    <div class="row align-items-center">
+      <div class="col-12 col-lg-12">
+
+        <!-- Fondo (imagen) -->
+        <img src="./assets/img/hero_01.png" alt="Hero GLAM" class="hero-img">
+
+        <!-- Contenido sobre la imagen -->
+        <div class="hero-content position-absolute top-50 start-50 translate-middle w-100 px-3">
+          <h1 class="display-5 fw-bold mb-4">• GLAM •</h1>
+          <h2 class="display-6 fw-bold mb-4">Deportes que te mueven</h2>
+          <p class="lead mb-5">
+            Zapatillas, indumentaria y accesorios de alto rendimiento. Envíos a todo el país.
+          </p>
+          <div class="d-flex justify-content-center gap-3 flex-wrap">
+            <a href="#productos" class="btn btn-outline-light btn-lg">👟 Ver productos</a>
+            <a href="#ofertas" class="btn btn-outline-light btn-lg">⚡ Ofertas de hoy</a>
+          </div>
         </div>
+
+      </div>
     </div>
   </div>
 </section>
 
 <style>
-/* Fondo del hero: cambiá la imagen por la tuya */
-.hero{
-  min-height: 90vh;
-  background-image: url('./assets/img/accesorios/Reloj-2.png'); /* <-- tu imagen */
-  background-size: cover;
-  background-position: center;
+.hero {
   position: relative;
+  width: 100%;
+  height: 90vh; /* altura visible */
   overflow: hidden;
 }
 
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;      /* rellena sin deformarse */
+  filter: brightness(0.5); /* oscurece para mejorar contraste del texto */
+  z-index: 1;
+}
 
+.hero-content {
+  z-index: 2; /* encima de la imagen */
+}
 
-
+@media (max-width: 768px) {
+  .hero {
+    height: 70vh;
+  }
+  .hero-content h1, .hero-content h2 {
+    font-size: 1.8rem;
+  }
+}
 </style>
 
 

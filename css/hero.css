@@ -1,0 +1,10 @@
+.hero{
+    width: 100%;
+  height: 800px;
+  background-image: url('../assets/img/hero_01.pn'); /* <-- tu imagen */
+  background-size: cover;        /* ocupa todo el ancho y alto */
+  background-position: center;   /* centra la imagen */
+  background-repeat: no-repeat;
+}
+
+
