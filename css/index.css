@@ -13,3 +13,23 @@
     color: blue;
     text-decoration: none;
 }
+
+.Visa:hover {
+    color: blue;
+    background-color: white;
+}
+
+.Mastercard:hover {
+    color: #fe5c01;
+    background-color: white;
+}
+
+.Paypal:hover {
+    color: #103780;
+    background-color: white;
+}
+
+.Discover:hover {
+    color: gray;
+    background-color: white;
+}
