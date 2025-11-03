@@ -1,10 +1,42 @@
-.hero{
-    width: 100%;
-  height: 800px;
-  background-image: url('../assets/img/hero_01.pn'); /* <-- tu imagen */
-  background-size: cover;        /* ocupa todo el ancho y alto */
-  background-position: center;   /* centra la imagen */
-  background-repeat: no-repeat;
+.card {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
+.card-img {
+  width: 100%;
+  height: 100vh; /* ocupa toda la altura visible */
+  object-fit: cover; /* mantiene proporción de la imagen */
+  border-radius: 0;
+  filter: brightness(60%); /* oscurece para resaltar texto */
+}
+
+/* ===== Texto general ===== */
+.title_1, .title_2, .title_3 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #fff;
+  text-align: center;
+  width: 90%;
+}
+
+/* ===== Posición vertical ===== */
+.title_1 { top: 40%; font-size: 4rem; font-family: fantasy; }
+.title_2 { top: 50%; font-size: 2rem; font-weight: 700; }
+.title_3 { top: 60%; font-size: 1.3rem; font-family: sans-serif; }
+
+/* ===== Responsividad ===== */
+@media (max-width: 992px) {
+  .title_1 { font-size: 3rem; top: 38%; }
+  .title_2 { font-size: 1.7rem; top: 50%; }
+  .title_3 { font-size: 1rem; top: 60%; }
+}
+
+@media (max-width: 576px) {
+  .title_1 { font-size: 2.2rem; top: 30%; }
+  .title_2 { font-size: 1.3rem; top: 46%; }
+  .title_3 { font-size: 0.9rem; top: 60%; padding: 0 10px; }
+}
 
