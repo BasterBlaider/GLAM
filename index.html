@@ -54,14 +54,13 @@
       <form class="d-flex" role="search">
         <input class="form-control m-2" type="search" placeholder="Buscar producto..." aria-label="Search"/>
         <button class="btn btn-outline-success m-2" type="submit">BUSCAR</button>
-        <button class="btn btn-outline-primar m-2 fs-5" data-bs-toggle="modal" data-bs-target="#authModal"><i class="bi bi-person"></i></button>
-        <button class="btn btn-outline-secondar m-2 fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#staticBackdrop" aria-controls="staticBackdrop"><i class="bi bi-cart4"></i></button>
-  
+        <button class="btn btn-outline-primary m-2 fs-5" data-bs-toggle="modal" data-bs-target="#authModal"><i class="bi bi-person"></i></button>
+        <button class="btn btn-outline-secondary m-2 fs-5" type="button" data-bs-toggle="offcanvas" data-bs-target="#cartCanvas" aria-controls="cartCanvas"><i class="bi bi-cart4"></i></button>
       </form>
     </div>
   </div>
-        </nav>
-    </header>
+</nav>
+</header>
     
     <!-- HERO -->
      <section class="card">
@@ -71,91 +70,166 @@
        <p class="lead mb-5 title_3">
       Zapatillas, indumentaria y accesorios de alto rendimiento. Envíos a todo el país.</p>
 
-       <div class="hero-buttons">
-    <a href="#productos" class="btn btn-outline-light btn-lg">👟 Ver productos</a>
-    <a href="#ofertas" class="btn btn-outline-light btn-lg">⚡ Ofertas de hoy</a>
-  </div>
+      <div class="hero-buttons">
+        <a href="#productos" class="btn btn-outline-light btn-lg">👟 Ver productos</a>
+        <a href="#ofertas" class="btn btn-outline-light btn-lg">⚡ Ofertas de hoy</a>
+      </div>
     </section>
 
     <main>
 
     </main>
 
-<!-- Modal Login / Registro -->
-        <div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+ <!-- Modal: Inicio de sesión -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content shadow">
-    
-      <div class="modal-header bg-dark text-white">
-        <h5 class="modal-title" id="authModalLabel">Mi cuenta</h5>
+        <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="authModalLabel">Iniciar sesión</h5>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
-
-      <div class="modal-body">
-        <!-- Nav Tabs -->
-        <ul class="nav nav-tabs mb-3 justify-content-center" id="authTabs" role="tablist">
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="login-tab" data-bs-toggle="tab" data-bs-target="#login" type="button" role="tab" aria-controls="login" aria-selected="true">
-              Iniciar Sesión
-            </button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link" id="register-tab" data-bs-toggle="tab" data-bs-target="#register" type="button" role="tab" aria-controls="register" aria-selected="false">
-              Registrarse
-            </button>
-          </li>
-        </ul>
-
-        <!-- Contenido de las pestañas -->
-        <div class="tab-content" id="authTabsContent">
-          <!-- Pestaña Login -->
-          <div class="tab-pane fade show active" id="login" role="tabpanel" aria-labelledby="login-tab">
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" placeholder="ejemplo@gmail.com" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Contraseña</label>
-                <input type="password" class="form-control" placeholder="••••••••" required>
-              </div>
-              <div class="d-flex justify-content-between align-items-center">
-                <div>
-                  <input type="checkbox" id="remember">
-                  <label for="remember">Recordarme</label>
-                </div>
-                <a href="#" class="text-decoration-none">¿Olvidaste tu contraseña?</a>
-              </div>
-              <button type="submit" class="btn btn-primary w-100 mt-3">Iniciar Sesión</button>
-            </form>
+      <div class="modal-body p-4">
+        <form>
+          <div class="mb-3">
+            <label for="emailLogin" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="emailLogin" placeholder="nombre@correo.com" required>
           </div>
-
-          <!-- Pestaña Registro -->
-          <div class="tab-pane fade" id="register" role="tabpanel" aria-labelledby="register-tab">
-            <form>
-              <div class="mb-3">
-                <label class="form-label">Nombre completo</label>
-                <input type="text" class="form-control" placeholder="Tu nombre" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Correo electrónico</label>
-                <input type="email" class="form-control" placeholder="ejemplo@gmail.com" required>
-              </div>
-              <div class="mb-3">
-                <label class="form-label">Contraseña</label>
-                <input type="password" class="form-control" placeholder="Crea una contraseña" required>
-              </div>
-              <button type="submit" class="btn btn-success w-100 mt-3">Registrarme</button>
-            </form>
+          <div class="mb-3">
+            <label for="passwordLogin" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passwordLogin" placeholder="********" required>
           </div>
-        </div>
+          <button type="submit" class="btn btn-primary w-100 mb-3">Ingresar</button>
+        </form>
+        <p class="text-center mb-0">
+          ¿No tenés cuenta?
+          <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Registrate acá</a>
+        </p>
       </div>
-
-    </div>
+     </div>
+  </div>
+</div>
+<!-- Modal: Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="registerModalLabel">Crear cuenta</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form>
+          <div class="mb-3">
+            <label for="nameRegister" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nameRegister" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="emailRegister" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="emailRegister" placeholder="nombre@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="passwordRegister" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passwordRegister" placeholder="********" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mb-3">Registrarse</button>
+        </form>
+        <p class="text-center mb-0">
+          ¿Ya tenés cuenta?
+          <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#authModal">Iniciar sesión</a>
+        </p>
+      </div>
+     </div>
+  </div>
+</div>
+<!-- Offcanvas: Carrito -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="cartCanvasLabel" data-bs-backdrop="true">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2" id="cartCanvasLabel">
+      Tu Carrito<i class="bi bi-cart4"></i>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
   </div>
 
+  <div class="offcanvas-body d-flex flex-column">
+    <!-- Ítems del carrito -->
+    <ul class="list-group mb-3">
+      <!-- Item 1 -->
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img src="./assets/img/zapatillas/Zapatillas-Nike-3.png" alt="Zapatilla" width="48" height="48" class="rounded">
+          <div>
+            <div class="fw-semibold">Zapatillas Nike</div>
+            <small class="text-muted">Talle 43 • Negro</small>
+          </div>
         </div>
-    </body>
+        <div class="text-end">
+          <div class="input-group input-group-sm mb-1" style="width: 110px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="text" class="form-control text-center" value="1">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+          <div class="fw-semibold">$ 121.990</div>
+        </div>
+      </li>
+
+      <!-- Item 2 -->
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img src="./assets/img/remeras/Remera-Estampada-2.png" alt="Remera" width="48" height="48" class="rounded">
+          <div>
+            <div class="fw-semibold">Remera Estampada</div>
+            <small class="text-muted">M • Negra</small>
+          </div>
+        </div>
+        <div class="text-end">
+          <div class="input-group input-group-sm mb-1" style="width: 110px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="text" class="form-control text-center" value="3">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+          <div class="fw-semibold">$ 49.990</div>
+        </div>
+      </li>
+       <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img src="./assets/img/accesorios/Reloj-2.png" alt="Remera" width="48" height="48" class="rounded">
+          <div>
+            <div class="fw-semibold">Reloj Pulsera</div>
+            <small class="text-muted">M • Cristal</small>
+          </div>
+        </div>
+        <div class="text-end">
+          <div class="input-group input-group-sm mb-1" style="width: 110px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="text" class="form-control text-center" value="1">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+          <div class="fw-semibold">$ 350.990</div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Resumen -->
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between">
+        <span>Subtotal</span><span class="fw-semibold">$ 529.970</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span>Envío</span><span class="fw-semibold">$ 5.000</span>
+      </div>
+      <hr class="my-2">
+      <div class="d-flex justify-content-between fs-5">
+        <span>Total</span><span class="fw-bold">$ 534.970</span>
+      </div>
+
+      <div class="d-grid gap-2 mt-3">
+        <a href="checkout.html" class="btn btn-primary">Finalizar compra</a>
+        <button class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Seguir comprando</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
