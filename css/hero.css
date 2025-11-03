@@ -65,7 +65,7 @@
 @media (max-width: 576px) {
   .hero-buttons {
     width: 100%;
-    top: 80%;
+    top: 85%;
   }
   .hero-buttons .btn {
     font-size: 0.7rem;
