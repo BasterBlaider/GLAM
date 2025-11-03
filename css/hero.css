@@ -27,6 +27,18 @@
 .title_2 { top: 50%; font-size: 2rem; font-weight: 700; }
 .title_3 { top: 60%; font-size: 1.3rem; font-family: sans-serif; }
 
+.hero-buttons {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 2;
+}
+
 /* ===== Responsividad ===== */
 @media (max-width: 992px) {
   .title_1 { font-size: 3rem; top: 38%; }
@@ -40,3 +52,23 @@
   .title_3 { font-size: 0.9rem; top: 60%; padding: 0 10px; }
 }
 
+@media (max-width: 768px) {
+  .hero-buttons {
+    top: 80%;
+  }
+  .hero-buttons .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-buttons {
+    width: 100%;
+    top: 80%;
+  }
+  .hero-buttons .btn {
+    font-size: 0.7rem;
+    padding: 0.5rem 1.2rem;
+  }
+}
