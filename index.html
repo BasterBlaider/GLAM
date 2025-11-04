@@ -79,13 +79,159 @@
               </div>
             </a>
           </div>
-        </div>
-      </section>
-    </main>
-  </body>
+ 
+ <!-- Modal: Inicio de sesión -->
+<div class="modal fade" id="authModal" tabindex="-1" aria-labelledby="authModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+        <div class="modal-header bg-dark text-white">
+        <h5 class="modal-title" id="authModalLabel">Iniciar sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form>
+          <div class="mb-3">
+            <label for="emailLogin" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="emailLogin" placeholder="nombre@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="passwordLogin" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passwordLogin" placeholder="********" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100 mb-3">Ingresar</button>
+        </form>
+        <p class="text-center mb-0">
+          ¿No tenés cuenta?
+          <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#registerModal">Registrate acá</a>
+        </p>
+      </div>
+     </div>
+  </div>
+</div>
+<!-- Modal: Registro -->
+<div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content shadow">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="registerModalLabel">Crear cuenta</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form>
+          <div class="mb-3">
+            <label for="nameRegister" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nameRegister" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="emailRegister" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="emailRegister" placeholder="nombre@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="passwordRegister" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="passwordRegister" placeholder="********" required>
+          </div>
+          <button type="submit" class="btn btn-success w-100 mb-3">Registrarse</button>
+        </form>
+        <p class="text-center mb-0">
+          ¿Ya tenés cuenta? 
+          <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#authModal">Iniciar sesión</a>
+        </p> 
+      </div> 
+     </div>
+  </div>
+</div>
+<!-- Offcanvas: Carrito -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="cartCanvas" aria-labelledby="cartCanvasLabel" data-bs-backdrop="true">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title d-flex align-items-center gap-2" id="cartCanvasLabel">
+      Tu Carrito<i class="bi bi-cart4"></i>
+    </h5>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar"></button>
+  </div>
 
-  <script
-    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+  <div class="offcanvas-body d-flex flex-column">
+    <!-- Ítems del carrito -->
+    <ul class="list-group mb-3">
+      <!-- Item 1 -->
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img src="./assets/img/zapatillas/Zapatillas-Nike-3.png" alt="Zapatilla" width="48" height="48" class="rounded">
+          <div>
+            <div class="fw-semibold">Zapatillas Nike</div>
+            <small class="text-muted">Talle 43 • Negro</small>
+          </div>
+        </div>
+        <div class="text-end">
+          <div class="input-group input-group-sm mb-1" style="width: 110px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="text" class="form-control text-center" value="1">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+          <div class="fw-semibold">$ 121.990</div>
+        </div>
+      </li>
+
+      <!-- Item 2 -->
+      <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img src="./assets/img/remeras/Remera-Estampada-2.png" alt="Remera" width="48" height="48" class="rounded">
+          <div>
+            <div class="fw-semibold">Remera Estampada</div>
+            <small class="text-muted">M • Negra</small>
+          </div>
+        </div>
+        <div class="text-end">
+          <div class="input-group input-group-sm mb-1" style="width: 110px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="text" class="form-control text-center" value="3">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+          <div class="fw-semibold">$ 49.990</div>
+        </div>
+      </li>
+       <li class="list-group-item d-flex align-items-center justify-content-between">
+        <div class="d-flex align-items-center gap-3">
+          <img src="./assets/img/accesorios/Reloj-2.png" alt="Remera" width="48" height="48" class="rounded">
+          <div>
+            <div class="fw-semibold">Reloj Pulsera</div>
+            <small class="text-muted">M • Cristal</small>
+          </div>
+        </div>
+        <div class="text-end">
+          <div class="input-group input-group-sm mb-1" style="width: 110px;">
+            <button class="btn btn-outline-secondary" type="button">-</button>
+            <input type="text" class="form-control text-center" value="1">
+            <button class="btn btn-outline-secondary" type="button">+</button>
+          </div>
+          <div class="fw-semibold">$ 350.990</div>
+        </div>
+      </li>
+    </ul>
+
+    <!-- Resumen -->
+    <div class="mt-auto">
+      <div class="d-flex justify-content-between">
+        <span>Subtotal</span><span class="fw-semibold">$ 529.970</span>
+      </div>
+      <div class="d-flex justify-content-between">
+        <span>Envío</span><span class="fw-semibold">$ 5.000</span>
+      </div>
+      <hr class="my-2">
+      <div class="d-flex justify-content-between fs-5">
+        <span>Total</span><span class="fw-bold">$ 534.970</span>
+      </div>
+
+      <div class="d-grid gap-2 mt-3">
+        <a href="checkout.html" class="btn btn-primary">Finalizar compra</a>
+        <button class="btn btn-outline-secondary" data-bs-dismiss="offcanvas">Seguir comprando</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
     crossorigin="anonymous"
   ></script>
