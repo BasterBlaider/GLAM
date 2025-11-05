@@ -3,6 +3,27 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.cardPrincipal {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  padding: 35px;
+}
+.cardOverlay{
+    object-fit: cover;
+    object-position: center;
+}
+.cardOverlay {
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+.cardPrincipal:hover .cardOverlay {
+  opacity: 0;
+}
+.cardPrincipal:hover .cardOverlay {
+  transform: scale(1.05s);
+  transition: all 0.3s ease;
+}
 
 .texto-footer {
     color: white;
@@ -32,4 +53,3 @@
 .Discover:hover {
     color: gray;
     background-color: white;
-}

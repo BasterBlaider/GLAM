@@ -1,0 +1,13 @@
+.Talles:hover {
+    scale: calc(1.1);
+    background-color: white;
+    color: black;
+}
+
+.Botones:hover {
+    scale: calc(1.009);
+}
+
+.Interior {
+    background-color: #2d3135;
+}
