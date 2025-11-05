@@ -1,0 +1,12 @@
+.card_principal {
+    transition: transform 0.3s;
+  }
+
+.card_principal:hover {
+    transform: translateY(-8px);
+  }
+
+.card_principal:hover .icono_awesome {
+    transform: scale(1.2);
+    color: #004aad;
+  }
