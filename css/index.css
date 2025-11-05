@@ -3,24 +3,59 @@
     padding: 0px;
     box-sizing: border-box;
 }
+
 .cardPrincipal {
-  position: relative;
-  width: 100%;
-  margin: auto;
-  padding: 35px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    padding: 35px;
 }
-.cardOverlay{
+
+.cardOverlay {
     object-fit: cover;
     object-position: center;
 }
+
 .cardOverlay {
-  opacity: 1;
-  transition: all 0.3s ease;
+    opacity: 1;
+    transition: all 0.3s ease;
 }
+
 .cardPrincipal:hover .cardOverlay {
-  opacity: 0;
+    opacity: 0;
 }
+
 .cardPrincipal:hover .cardOverlay {
-  transform: scale(1.05s);
-  transition: all 0.3s ease;
+    transform: scale(1.05s);
+    transition: all 0.3s ease;
+}
+
+.cards-wrapper {
+    display: flex;
+}
+
+.carousel-inner {
+    padding: 1em;
+}
+
+.carousel-control-prev, .carousel-control-next{
+    background-color: black;
+    width: 6vh;
+    height: 6vh;
+    border-radius: 50%;
+    top: 50%;
+}
+
+.card1 {
+    background-color: aliceblue;
+    margin: 3em;
+    width: calc(100%/3);
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 6px 8px 0 rgb(black, black, black);
+}
+
+.dropdown {
+    display: flex;
+    justify-content: space-evenly;
 }
