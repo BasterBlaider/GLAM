@@ -150,7 +150,7 @@
         <form>
           <div class="mb-3">
             <label for="emailLogin" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="emailLogin" placeholder="nombre@correo.com" required>
+            <input type="email" class="form-control" id="emailLogin" placeholder="nombre@correo.com" minlength="4" maxlength="25" required>
           </div>
           <div class="mb-3">
             <label for="passwordLogin" class="form-label">Contraseña</label>
@@ -178,15 +178,15 @@
         <form>
           <div class="mb-3">
             <label for="nameRegister" class="form-label">Nombre completo</label>
-            <input type="text" class="form-control" id="nameRegister" placeholder="Tu nombre" required>
+            <input type="text" class="form-control" id="nameRegister" placeholder="Tu nombre" minlength="4" maxlength="25" required>
           </div>
           <div class="mb-3">
             <label for="emailRegister" class="form-label">Correo electrónico</label>
-            <input type="email" class="form-control" id="emailRegister" placeholder="nombre@correo.com" required>
+            <input type="email" class="form-control" id="emailRegister" placeholder="nombre@correo.com" minlength="4" maxlength="25" required>
           </div>
           <div class="mb-3">
             <label for="passwordRegister" class="form-label">Contraseña</label>
-            <input type="password" class="form-control" id="passwordRegister" placeholder="********" required>
+            <input type="password" class="form-control" id="passwordRegister" placeholder="********" minlength="4" maxlength="25" required>
           </div>
           <button type="submit" class="btn btn-success w-100 mb-3">Registrarse</button>
         </form>
